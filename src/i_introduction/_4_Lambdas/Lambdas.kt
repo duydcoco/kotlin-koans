@@ -21,7 +21,30 @@ fun todoTask4(collection: Collection<Int>): Nothing = TODO(
     documentation = doc4(),
     references = { JavaCode4().task4(collection) })
 
-fun task4(collection: Collection<Int>): Boolean = todoTask4(collection)
+fun task4(collection: Collection<Int>): Boolean{
+//    val contains42:(Int)->Boolean={x->x%42==0}
+//    var x = 0
+//    for(item in collection){
+//        if(contains42(item)){
+//            x+=1
+//        }
+//    }
+//    if(x>0){
+//        return true
+//    }else{
+//        return false
+//    }
+
+
+//    val contains42:(Int)->Boolean={x->x%42==0}
+//    return collection.filter(contains42).isEmpty().not()
+
+//    return collection.filter(){x->x%42==0}.isNotEmpty()
+
+//    return collection.filter{x->x%42==0}.isNotEmpty()
+
+    return collection.filter{it%42==0}.isNotEmpty()
+}
 
 
 

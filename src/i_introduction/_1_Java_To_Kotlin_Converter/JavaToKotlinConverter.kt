@@ -13,5 +13,16 @@ fun todoTask1(collection: Collection<Int>): Nothing = TODO(
 
 
 fun task1(collection: Collection<Int>): String {
-    todoTask1(collection)
+    var x:Int = 0;
+    var str = "{";
+    for(item in collection){
+        str+=item
+        if(x==collection.size-1){
+            str+="}"
+        }else{
+            str +=", "
+        }
+        x++;
+    }
+    return str;
 }
